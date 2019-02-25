@@ -5,7 +5,7 @@ require_relative 'boot'
 
 require 'rails'
 
-%w( active_record action_controller action_view sprockets ).each { |framework| require "#{framework}/railtie" }
+%w( active_record action_controller action_mailer action_view sprockets ).each { |framework| require "#{framework}/railtie" }
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
