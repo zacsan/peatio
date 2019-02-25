@@ -5,7 +5,7 @@ require_relative 'boot'
 
 require 'rails'
 
-%w( active_record action_controller action_mailer action_view sprockets ).each { |framework| require "#{framework}/railtie" }
+%w( active_record action_controller action_view sprockets ).each { |framework| require "#{framework}/railtie" }
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -38,7 +38,7 @@ module Peatio
     config.time_zone = ENV.fetch('TIMEZONE')
 
     # Don't suppress exceptions in before_commit & after_commit callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
 
     # Configure relative url root by setting URL_ROOT_PATH environment variable.
     # Used by microkube with API Gateway.
